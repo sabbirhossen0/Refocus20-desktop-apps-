@@ -13,7 +13,7 @@ void main() async {
     center: true,
     backgroundColor: Colors.transparent,
     skipTaskbar: false,
-    title: "Green Screen Reminder",
+    title: "Green Screen Reminder ",
   );
   windowManager.waitUntilReadyToShow(windowOptions, () async {
     await windowManager.show();
@@ -106,6 +106,7 @@ class _GreenScreenState extends State<GreenScreen> with WindowListener {
       body: Center(
         child: _isGreenScreenVisible
             ? Text(
+          'Now time is  your resting time'+
           '$_countdown',
           style: const TextStyle(
             fontSize: 100,
