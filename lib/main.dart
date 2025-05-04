@@ -61,6 +61,7 @@ class _GreenScreenState extends State<GreenScreen> with WindowListener {
   }
 
   void _showGreenScreen() async {
+
     setState(() {
       _isGreenScreenVisible = true;
       _countdown = 20; // Reset countdown to 20 seconds
@@ -117,7 +118,7 @@ class _GreenScreenState extends State<GreenScreen> with WindowListener {
             : Container(
           color: Colors.green,
               child: const Text(
-                        'Green Screen Reminder',
+                        'Refocus Reminder',
                         style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                       ),
             ),
