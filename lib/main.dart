@@ -108,8 +108,9 @@ class _GreenScreenState extends State<GreenScreen> with WindowListener {
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
-          image: DecorationImage(image: NetworkImage("https://w0.peakpx.com/wallpaper/325/750/HD-wallpaper-cool-green-nature-beautiful-green-nature.jpg"))
-
+          image: DecorationImage(
+              fit: BoxFit.contain,
+              image: NetworkImage("https://w0.peakpx.com/wallpaper/325/750/HD-wallpaper-cool-green-nature-beautiful-green-nature.jpg",))
         ),
 
 
