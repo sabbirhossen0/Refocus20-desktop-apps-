@@ -117,10 +117,10 @@ class _GreenScreenState extends State<GreenScreen> with WindowListener {
         child: Center(
           child: _isGreenScreenVisible
               ? Text(
-            'Now time is  your resting time :'+
+            'Resting Time :'+
             '$_countdown',
             style: const TextStyle(
-              fontSize: 100,
+              fontSize: 50,
               color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
