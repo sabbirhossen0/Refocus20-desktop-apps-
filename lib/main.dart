@@ -55,7 +55,7 @@ class _GreenScreenState extends State<GreenScreen> with WindowListener {
   }
 
   void _startPeriodicTimer() {
-    _periodicTimer = Timer.periodic(const Duration(minutes: 20), (timer) {
+    _periodicTimer = Timer.periodic(const Duration(minutes: 1), (timer) {
       _showGreenScreen();
     });
   }
@@ -104,24 +104,34 @@ class _GreenScreenState extends State<GreenScreen> with WindowListener {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: _isGreenScreenVisible ? Colors.green : Colors.white,
-      body: Center(
-        child: _isGreenScreenVisible
-            ? Text(
-          'Now time is  your resting time :'+
-          '$_countdown',
-          style: const TextStyle(
-            fontSize: 100,
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
-        )
-            : Container(
-          color: Colors.green,
-              child: const Text(
-                        'Refocus Reminder',
-                        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                      ),
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        decoration: BoxDecoration(
+          image: DecorationImage(image: NetworkImage("https://w0.peakpx.com/wallpaper/325/750/HD-wallpaper-cool-green-nature-beautiful-green-nature.jpg"))
+
+        ),
+
+
+        child: Center(
+          child: _isGreenScreenVisible
+              ? Text(
+            'Now time is  your resting time :'+
+            '$_countdown',
+            style: const TextStyle(
+              fontSize: 100,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
             ),
+          )
+              : Container(
+            color: Colors.green,
+                child: const Text(
+                          'Refocus Reminder',
+                          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                        ),
+              ),
+        ),
       ),
     );
   }
