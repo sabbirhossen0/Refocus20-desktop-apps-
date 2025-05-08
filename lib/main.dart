@@ -55,7 +55,7 @@ class _GreenScreenState extends State<GreenScreen> with WindowListener {
   }
 
   void _startPeriodicTimer() {
-    _periodicTimer = Timer.periodic(const Duration(minutes: 1), (timer) {
+    _periodicTimer = Timer.periodic(const Duration(minutes: 15), (timer) {
       _showGreenScreen();
     });
   }
@@ -64,7 +64,7 @@ class _GreenScreenState extends State<GreenScreen> with WindowListener {
 
     setState(() {
       _isGreenScreenVisible = true;
-      _countdown = 20; // Reset countdown to 20 seconds
+      _countdown = 25; // Reset countdown to 20 seconds
     });
 
     // Show and maximize window
@@ -73,7 +73,7 @@ class _GreenScreenState extends State<GreenScreen> with WindowListener {
     await windowManager.maximize();
 
     // Start countdown timer
-    _countdownTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
+    _countdownTimer = Timer.periodic(const Duration(seconds: 25), (timer) {
       setState(() {
         _countdown--;
       });
